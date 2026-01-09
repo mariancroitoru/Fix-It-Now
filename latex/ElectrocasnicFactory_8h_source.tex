@@ -1,0 +1,20 @@
+\doxysection{Electrocasnic\+Factory.\+h}
+\hypertarget{ElectrocasnicFactory_8h_source}{}\label{ElectrocasnicFactory_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Electrocasnic.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classElectrocasnicFactory}{ElectrocasnicFactory}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ std::unique\_ptr<Electrocasnic>\ creeazaElectrocasnic(\textcolor{keyword}{const}\ std::string\&\ tip,\textcolor{keyword}{const}\ std::string\&\ marca,\textcolor{keyword}{const}\ std::string\&\ model,\textcolor{keywordtype}{int}\ anFabricatie,\textcolor{keywordtype}{double}\ pretCatalog,\textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ dateSpecifice);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{static}\ std::map<std::string,\ std::string>\ parseazaDateSpecifice(\textcolor{keyword}{const}\ std::string\&\ linie);}
+\DoxyCodeLine{00015\ \};}
+
+\end{DoxyCode}

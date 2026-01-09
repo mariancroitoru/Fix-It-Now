@@ -1,0 +1,138 @@
+\doxysection{Tehnician Class Reference}
+\hypertarget{classTehnician}{}\label{classTehnician}\index{Tehnician@{Tehnician}}
+
+
+Inheritance diagram for Tehnician\+:
+% FIG 0
+
+
+Collaboration diagram for Tehnician\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTehnician_aef198680ddd6126ddafde70b44481693}\label{classTehnician_aef198680ddd6126ddafde70b44481693} 
+{\bfseries Tehnician} (const std\+::string \&\+\_\+nume, const std\+::string \&\+\_\+prenume, const std\+::string \&\+\_\+cnp, const \mbox{\hyperlink{classData}{Data}} \&\+\_\+data\+Angajarii, const std\+::string \&\+\_\+oras\+Domiciliu)
+\item 
+\Hypertarget{classTehnician_ac70ae9dafc2a6b4abaccfcf690ad99e4}\label{classTehnician_ac70ae9dafc2a6b4abaccfcf690ad99e4} 
+void {\bfseries adauga\+Specializare} (const std\+::string \&tip, const std\+::string \&marca)
+\item 
+\Hypertarget{classTehnician_abfae91e3d9467b10c0904bf8d1cacfa6}\label{classTehnician_abfae91e3d9467b10c0904bf8d1cacfa6} 
+bool {\bfseries are\+Specializare} (const std\+::string \&tip, const std\+::string \&marca) const
+\item 
+\Hypertarget{classTehnician_aecc5ddec602db25a0b03c56cd7d14e87}\label{classTehnician_aecc5ddec602db25a0b03c56cd7d14e87} 
+bool {\bfseries poate\+Primi\+Cerere} () const
+\item 
+\Hypertarget{classTehnician_ad83ed21234bfaf8323d252eefcb69f05}\label{classTehnician_ad83ed21234bfaf8323d252eefcb69f05} 
+void {\bfseries adauga\+Id\+Cerere\+Activa} (int id)
+\item 
+\Hypertarget{classTehnician_a4d3e9fa966cb2a5a7ccc113731377bad}\label{classTehnician_a4d3e9fa966cb2a5a7ccc113731377bad} 
+void {\bfseries finalizare\+Cerere} (int id\+Cerere, double valoare\+Reparatie, int durata\+Efectiva)
+\item 
+\Hypertarget{classTehnician_a932e393dbaa06d03acbe64510cf1f693}\label{classTehnician_a932e393dbaa06d03acbe64510cf1f693} 
+double {\bfseries get\+Durata\+Totala\+Lucrata} () const
+\item 
+\Hypertarget{classTehnician_a5babe27408c52cec5e77b4dd27329994}\label{classTehnician_a5babe27408c52cec5e77b4dd27329994} 
+int {\bfseries get\+Nr\+Cereri\+Active} () const
+\item 
+double \mbox{\hyperlink{classTehnician_a374354591cb8ec997bf0edfd675c2bbf}{calculeaza\+Salariu}} () const override
+\item 
+void \mbox{\hyperlink{classTehnician_a4e6a74fa4a1661f3ae8832da3a3d3d6e}{afisare}} (std\+::ostream \&) const override
+\item 
+std\+::string \mbox{\hyperlink{classTehnician_a47d31128b4ad77aebef6c3657ea01cdd}{get\+Tip\+Angajat}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classAngajat}{Angajat}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Angajat} (const std\+::string \&, const std\+::string \&, const std\+::string \&, const \mbox{\hyperlink{classData}{Data}} \&, const std\+::string \&)
+\item 
+int {\bfseries get\+Id} () const
+\item 
+std\+::string {\bfseries get\+Nume} () const
+\item 
+std\+::string {\bfseries get\+Prenume} () const
+\item 
+std\+::string {\bfseries get\+CNP} () const
+\item 
+\mbox{\hyperlink{classData}{Data}} {\bfseries get\+Data\+Angajarii} () const
+\item 
+std\+::string {\bfseries get\+Oras\+Domiciliu} () const
+\item 
+void {\bfseries set\+Nume} (const std\+::string \&)
+\item 
+void {\bfseries set\+Prenume} (const std\+::string \&)
+\item 
+void {\bfseries validare\+Nume} (const std\+::string \&, const std\+::string \&) const
+\item 
+double {\bfseries calculeaza\+Bonus\+Fidelitate} () const
+\item 
+bool {\bfseries primeste\+Prima\+Transport} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classAngajat}{Angajat}}}
+\begin{DoxyCompactItemize}
+\item 
+const int {\bfseries id}
+\item 
+std\+::string {\bfseries nume}
+\item 
+std\+::string {\bfseries prenume}
+\item 
+std\+::string {\bfseries cnp}
+\item 
+\mbox{\hyperlink{classData}{Data}} {\bfseries data\+Angajarii}
+\item 
+std\+::string {\bfseries oras\+Domiciliu}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{classAngajat}{Angajat}}}
+\begin{DoxyCompactItemize}
+\item 
+static int {\bfseries next\+ID} =1000
+\item 
+static constexpr double {\bfseries SALARIU\+\_\+\+BAZA} =4000.\+0
+\item 
+static constexpr double {\bfseries BONUS\+\_\+\+DE\+\_\+\+FIDELITARE\+\_\+\+PROCENT} =5.\+0
+\item 
+static constexpr int {\bfseries ANI\+\_\+\+FIDELITATE} =3
+\item 
+static constexpr double {\bfseries PRIMA\+\_\+\+TRANS} =400.\+0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTehnician_a4e6a74fa4a1661f3ae8832da3a3d3d6e}\label{classTehnician_a4e6a74fa4a1661f3ae8832da3a3d3d6e} 
+\index{Tehnician@{Tehnician}!afisare@{afisare}}
+\index{afisare@{afisare}!Tehnician@{Tehnician}}
+\doxysubsubsection{\texorpdfstring{afisare()}{afisare()}}
+{\footnotesize\ttfamily void Tehnician\+::afisare (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classAngajat}{Angajat}}.
+
+\Hypertarget{classTehnician_a374354591cb8ec997bf0edfd675c2bbf}\label{classTehnician_a374354591cb8ec997bf0edfd675c2bbf} 
+\index{Tehnician@{Tehnician}!calculeazaSalariu@{calculeazaSalariu}}
+\index{calculeazaSalariu@{calculeazaSalariu}!Tehnician@{Tehnician}}
+\doxysubsubsection{\texorpdfstring{calculeazaSalariu()}{calculeazaSalariu()}}
+{\footnotesize\ttfamily double Tehnician\+::calculeaza\+Salariu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classAngajat}{Angajat}}.
+
+\Hypertarget{classTehnician_a47d31128b4ad77aebef6c3657ea01cdd}\label{classTehnician_a47d31128b4ad77aebef6c3657ea01cdd} 
+\index{Tehnician@{Tehnician}!getTipAngajat@{getTipAngajat}}
+\index{getTipAngajat@{getTipAngajat}!Tehnician@{Tehnician}}
+\doxysubsubsection{\texorpdfstring{getTipAngajat()}{getTipAngajat()}}
+{\footnotesize\ttfamily string Tehnician\+::get\+Tip\+Angajat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classAngajat}{Angajat}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Tehnician.\+h\item 
+Tehnician.\+cpp\end{DoxyCompactItemize}

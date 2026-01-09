@@ -1,0 +1,116 @@
+# Fisier de test: Cereri valide de reparatie
+# Format: Tip,Marca,Model,AnFabricatie,PretCatalog,DateSpec,Timestamp,Complexitate
+#
+# Timestamp: DD.MM.YYYY HH:MM:SS
+# Complexitate: 1-5 (durata = vechime * complexitate)
+#
+# IMPORTANT: Aparatele trebuie sa existe in catalog!
+
+# === BATCH 1: Cereri simple (10:00 - 10:05) ===
+
+# Cerere 1: TV Samsung - complexitate mica, durata mica
+TV,Samsung,QLED55,2021,3500.0,diagonala:55;unitateDiagonala:inch,09.01.2026 10:00:00,2
+
+# Cerere 2: Frigider LG - complexitate medie
+Frigider,LG,InstaView,2021,3500.0,congelator:da,09.01.2026 10:01:00,3
+
+# Cerere 3: Masina spalat Whirlpool - complexitate mica
+MasinaDeSpalat,Whirlpool,FWG71484,2020,1800.0,capacitate:7,09.01.2026 10:02:00,1
+
+# Cerere 4: TV LG - complexitate mare (va dura mai mult)
+TV,LG,OLED55C1,2021,4500.0,diagonala:55;unitateDiagonala:inch,09.01.2026 10:03:00,4
+
+# Cerere 5: Frigider Samsung - complexitate medie
+Frigider,Samsung,Frost200,2020,2500.0,congelator:da,09.01.2026 10:04:00,3
+
+# === BATCH 2: Test incarcare echilibrata (10:10 - 10:20) ===
+# Toate cererile pentru acelasi tip - vor fi alocate la acelasi tehnician specializat
+# Pentru a testa incarcarea echilibrata, avem nevoie de mai multi tehnicieni cu specializare identica
+
+# Cereri consecutive pentru TV Samsung (tehnicienii 1, 3, 5 sunt specializati)
+TV,Samsung,UE50AU7172,2020,2200.0,diagonala:50;unitateDiagonala:inch,09.01.2026 10:10:00,2
+TV,Samsung,QLED55,2021,3500.0,diagonala:55;unitateDiagonala:inch,09.01.2026 10:11:00,2
+TV,Samsung,Crystal UHD,2019,1800.0,diagonala:43;unitateDiagonala:inch,09.01.2026 10:12:00,2
+TV,Samsung,Neo QLED,2022,5500.0,diagonala:65;unitateDiagonala:inch,09.01.2026 10:13:00,2
+TV,Samsung,UE50AU7172,2020,2200.0,diagonala:50;unitateDiagonala:inch,09.01.2026 10:14:00,2
+
+# === BATCH 3: Aparate vechi (durata mare) (10:30 - 10:35) ===
+
+# Frigider foarte vechi (2014) + complexitate mare = durata ~60 unitati
+Frigider,Samsung,VechiModel,2014,1200.0,congelator:da,09.01.2026 10:30:00,5
+
+# TV din 2019 + complexitate mare = durata ~35 unitati
+TV,LG,UHD43,2019,1500.0,diagonala:43;unitateDiagonala:inch,09.01.2026 10:31:00,5
+
+# Masina spalat din 2018 + complexitate mare = durata ~40 unitati
+MasinaDeSpalat,Arctic,Budget200,2018,800.0,capacitate:5,09.01.2026 10:32:00,5
+
+# === BATCH 4: Aparate noi (durata mica) (10:40 - 10:45) ===
+
+# TV din 2026 (vechime 0 -> 1) + complexitate mica = durata 2 unitati
+TV,LG,Model2026,2026,3000.0,diagonala:50;unitateDiagonala:inch,09.01.2026 10:40:00,2
+
+# Frigider din 2022 (vechime 4) + complexitate mica = durata 4 unitati
+Frigider,Samsung,FamilyHub,2022,4500.0,congelator:da,09.01.2026 10:41:00,1
+
+# Masina spalat din 2022 (vechime 4) + complexitate mica = durata 8 unitati
+MasinaDeSpalat,Samsung,AddWash,2022,2800.0,capacitate:10,09.01.2026 10:42:00,2
+
+# === BATCH 5: Test limita 3 cereri active (11:00 - 11:10) ===
+# Vom trimite 5 cereri rapide pentru Frigider Samsung
+# Tehnicianul specializat (ex: Tehnician 2) va lua primele 3
+# Urmatoarele 2 vor intra in asteptare
+
+Frigider,Samsung,CoolMax,2019,2800.0,congelator:da,09.01.2026 11:00:00,1
+Frigider,Samsung,EcoFresh,2021,2200.0,congelator:nu,09.01.2026 11:00:10,1
+Frigider,Samsung,Frost200,2020,2500.0,congelator:da,09.01.2026 11:00:20,1
+Frigider,Samsung,FamilyHub,2022,4500.0,congelator:da,09.01.2026 11:00:30,1
+Frigider,Samsung,CoolMax,2019,2800.0,congelator:da,09.01.2026 11:00:40,1
+
+# === BATCH 6: Diverse combinatii (11:30 - 12:00) ===
+
+# Philips TV - tehnician 6 sau 9
+TV,Philips,55PUS8506,2021,2800.0,diagonala:55;unitateDiagonala:inch,09.01.2026 11:30:00,3
+
+# Arctic Frigider - tehnician 2 sau 7
+Frigider,Arctic,AK60,2018,1500.0,congelator:da,09.01.2026 11:35:00,4
+
+# Bosch Masina spalat - tehnician 4 sau 5
+MasinaDeSpalat,Bosch,WAU28T64BY,2021,2500.0,capacitate:9,09.01.2026 11:40:00,2
+
+# LG Frigider - tehnician 3
+Frigider,LG,SmartCool,2020,2900.0,congelator:da,09.01.2026 11:45:00,3
+
+# Whirlpool Masina spalat - tehnician 4 sau 9
+MasinaDeSpalat,Whirlpool,FSCR80430,2021,2200.0,capacitate:8,09.01.2026 11:50:00,2
+
+# Samsung TV - mai multi tehnicieni disponibili
+TV,Samsung,8K-QLED85,2023,15000.0,diagonala:85;unitateDiagonala:inch,09.01.2026 11:55:00,5
+
+# === BATCH 7: Complexitate maxima (12:30 - 12:45) ===
+
+# Toate cu complexitate 5 - pentru test calcul durata
+Frigider,Bosch,Serie4,2020,3200.0,congelator:da,09.01.2026 12:30:00,5
+TV,Samsung,Neo QLED,2022,5500.0,diagonala:65;unitateDiagonala:inch,09.01.2026 12:35:00,5
+MasinaDeSpalat,Samsung,WW90T4540,2021,2300.0,capacitate:9,09.01.2026 12:40:00,5
+
+# === BATCH 8: Complexitate minima (13:00 - 13:15) ===
+
+# Toate cu complexitate 1 - reparatii rapide
+Frigider,Arctic,AK54,2020,1600.0,congelator:nu,09.01.2026 13:00:00,1
+TV,Philips,50PUS7906,2020,2000.0,diagonala:50;unitateDiagonala:inch,09.01.2026 13:05:00,1
+MasinaDeSpalat,Whirlpool,FFB6238,2019,1500.0,capacitate:6,09.01.2026 13:10:00,1
+Frigider,Bosch,CompactLine,2019,2400.0,congelator:nu,09.01.2026 13:15:00,1
+
+# === TOTAL: 38 cereri valide ===
+# Distributie:
+# - TV: 15 cereri
+# - Frigider: 15 cereri  
+# - Masina de spalat: 8 cereri
+#
+# Complexitate:
+# - Nivel 1: 9 cereri (rapid)
+# - Nivel 2: 10 cereri (mediu-rapid)
+# - Nivel 3: 8 cereri (mediu)
+# - Nivel 4: 4 cereri (lung)
+# - Nivel 5: 7 cereri (foarte lung)

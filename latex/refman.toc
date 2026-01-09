@@ -1,0 +1,59 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Angajat Class Reference}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Angajat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Factory Class Reference}{7}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Cerere\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Reparatie Class Reference}{7}{section.4.3}%
+\contentsline {section}{\numberline {4.4}CNPValidator Class Reference}{8}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Data Class Reference}{8}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Electrocasnic Class Reference}{9}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Electrocasnic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Factory Class Reference}{9}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Frigider Class Reference}{10}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Member Function Documentation}{10}{subsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.1.1}afisare()}{10}{subsubsection.4.8.1.1}%
+\contentsline {subsubsection}{\numberline {4.8.1.2}cloneaza()}{11}{subsubsection.4.8.1.2}%
+\contentsline {section}{\numberline {4.9}Masina\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}De\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Spalat Class Reference}{11}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Member Function Documentation}{12}{subsection.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.9.1.1}afisare()}{12}{subsubsection.4.9.1.1}%
+\contentsline {subsubsection}{\numberline {4.9.1.2}cloneaza()}{12}{subsubsection.4.9.1.2}%
+\contentsline {section}{\numberline {4.10}Receptioner Class Reference}{12}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Member Function Documentation}{13}{subsection.4.10.1}%
+\contentsline {subsubsection}{\numberline {4.10.1.1}afisare()}{13}{subsubsection.4.10.1.1}%
+\contentsline {subsubsection}{\numberline {4.10.1.2}calculeazaSalariu()}{13}{subsubsection.4.10.1.2}%
+\contentsline {subsubsection}{\numberline {4.10.1.3}getTipAngajat()}{13}{subsubsection.4.10.1.3}%
+\contentsline {section}{\numberline {4.11}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{14}{section.4.11}%
+\contentsline {section}{\numberline {4.12}Supervizor Class Reference}{15}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Member Function Documentation}{16}{subsection.4.12.1}%
+\contentsline {subsubsection}{\numberline {4.12.1.1}afisare()}{16}{subsubsection.4.12.1.1}%
+\contentsline {subsubsection}{\numberline {4.12.1.2}calculeazaSalariu()}{16}{subsubsection.4.12.1.2}%
+\contentsline {subsubsection}{\numberline {4.12.1.3}getTipAngajat()}{16}{subsubsection.4.12.1.3}%
+\contentsline {section}{\numberline {4.13}Tehnician Class Reference}{16}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Member Function Documentation}{17}{subsection.4.13.1}%
+\contentsline {subsubsection}{\numberline {4.13.1.1}afisare()}{17}{subsubsection.4.13.1.1}%
+\contentsline {subsubsection}{\numberline {4.13.1.2}calculeazaSalariu()}{17}{subsubsection.4.13.1.2}%
+\contentsline {subsubsection}{\numberline {4.13.1.3}getTipAngajat()}{18}{subsubsection.4.13.1.3}%
+\contentsline {section}{\numberline {4.14}TV Class Reference}{18}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Member Function Documentation}{19}{subsection.4.14.1}%
+\contentsline {subsubsection}{\numberline {4.14.1.1}afisare()}{19}{subsubsection.4.14.1.1}%
+\contentsline {subsubsection}{\numberline {4.14.1.2}cloneaza()}{19}{subsubsection.4.14.1.2}%
+\contentsline {chapter}{\numberline {5}File Documentation}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Angajat.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{21}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Angajat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Factory.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{22}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Cerere\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Reparatie.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{22}{section.5.3}%
+\contentsline {section}{\numberline {5.4}CNPValidator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{23}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{23}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Electrocasnic.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{24}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Electrocasnic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Factory.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{24}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Frigider.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{24}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Masina\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}De\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Spalat.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{25}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Receptioner.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{25}{section.5.10}%
+\contentsline {section}{\numberline {5.11}Service\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{25}{section.5.11}%
+\contentsline {section}{\numberline {5.12}Supervizor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{27}{section.5.12}%
+\contentsline {section}{\numberline {5.13}Tehnician.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{27}{section.5.13}%
+\contentsline {section}{\numberline {5.14}TV.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{28}{section.5.14}%
+\contentsline {chapter}{Index}{29}{section*.39}%

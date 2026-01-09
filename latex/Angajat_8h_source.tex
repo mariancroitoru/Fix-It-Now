@@ -1,0 +1,67 @@
+\doxysection{Angajat.\+h}
+\hypertarget{Angajat_8h_source}{}\label{Angajat_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Data.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAngajat}{Angajat}}\{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//TODO\ :\ gandeste\ te\ la\ o\ denumire\ mai\ buna\ pentru\ id\ urile\ de\ la\ angajat\ si\ cerere}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ nextID;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ nume,\ prenume,\ cnp;}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classData}{Data}}\ dataAngajarii;}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ orasDomiciliu;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{double}\ SALARIU\_BAZA=4000.0;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{double}\ BONUS\_DE\_FIDELITARE\_PROCENT=5.0;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ ANI\_FIDELITATE=3;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{double}\ PRIMA\_TRANS=400.0;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classAngajat}{Angajat}}():id(0)\{\}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classAngajat}{Angajat}}(\textcolor{keyword}{const}\ std::string\&\ ,\textcolor{keyword}{const}\ std::string\&,\ \textcolor{keyword}{const}\ std::string\&\ ,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classData}{Data}}\&\ ,\ \textcolor{keyword}{const}\ std::string\&\ );\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classAngajat}{\string~Angajat}}()=\textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ getteri}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ getId()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ std::string\ getNume()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ std::string\ getPrenume()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ std::string\ getCNP()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classData}{Data}}\ getDataAngajarii()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ std::string\ getOrasDomiciliu()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//setteri}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ setNume(\textcolor{keyword}{const}\ std::string\&);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ setPrenume(\textcolor{keyword}{const}\ std::string\&\ );}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//validare}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ validareNume(\textcolor{keyword}{const}\ std::string\&\ ,\ \textcolor{keyword}{const}\ std::string\&\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//calcul\ salariu-\/-\/\ VIRTUAL\ PURE}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ calculeazaSalariu()\ \textcolor{keyword}{const}=0;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ afisare(std::ostream\&\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//tip\ angajat-\/-\/\ VIRTUAL\ PURE}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ getTipAngajat()\ \textcolor{keyword}{const}=0;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ auxiliare}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{double}\ calculeazaBonusFidelitate()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ primestePrimaTransport()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \};}
+
+\end{DoxyCode}

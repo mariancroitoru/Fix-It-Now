@@ -1,0 +1,50 @@
+# Fisier de test: Angajati valizi
+# Format: Tip,Nume,Prenume,CNP,DataAngajarii,OrasDomiciliu,[Specializari pentru Tehnicieni]
+#
+# Specializari format: tip1:marca1;tip1:marca2;tip2:marca1
+# Exemplu: TV:Samsung;TV:LG;Frigider:Samsung
+
+# === RECEPTIONERI (minim 1) ===
+Receptioner,Ionescu,Maria,2920515123456,01.06.2018,Bucuresti
+Receptioner,Georgescu,Elena,2850210234568,15.03.2019,Ploiesti
+
+# === SUPERVIZORI (minim 1) ===
+Supervizor,Popa,Alexandru,1780825345673,10.01.2017,Bucuresti
+Supervizor,Dumitrescu,Cristian,1710403456783,20.09.2016,Cluj
+
+# === TEHNICIENI (minim 3) ===
+
+# Tehnician 1: Specialist TV (Samsung, LG) + Frigidere Samsung
+Tehnician,Marinescu,Ion,1850203123450,15.03.2020,Cluj,TV:Samsung;TV:LG;Frigider:Samsung
+
+# Tehnician 2: Specialist Frigidere (Samsung, Arctic) + Masini spalat
+Tehnician,Popescu,Andrei,1950712234566,22.07.2019,Bucuresti,Frigider:Samsung;Frigider:Arctic;MasinaDeSpalat:Whirlpool
+
+# Tehnician 3: Specialist TV (toate marcile) + Frigidere LG
+Tehnician,Constantinescu,Mihai,1880328345671,05.11.2021,Timisoara,TV:Samsung;TV:LG;TV:Philips;Frigider:LG
+
+# Tehnician 4: Specialist Masini de spalat (toate marcile)
+Tehnician,Vasilescu,Daniel,1930619456781,12.02.2020,Iasi,MasinaDeSpalat:Whirlpool;MasinaDeSpalat:Bosch;MasinaDeSpalat:Samsung
+
+# Tehnician 5: Generalist - toate tipurile, mai multe marci
+Tehnician,Radulescu,Gabriel,1870504567893,30.08.2018,Constanta,TV:Samsung;TV:LG;Frigider:Samsung;Frigider:Bosch;MasinaDeSpalat:Bosch
+
+# === TESTARE CAZURI SPECIALE ===
+
+# Angajat la varsta minima (16 ani la angajare)
+# Nascut: 03.02.2008, Angajat: 15.03.2024 (16 ani si 1 luna)
+Tehnician,Tanase,Stefan,5080203123785,15.03.2024,Brasov,TV:Philips
+
+# Angajat mai in varsta (aproape de pensionare)
+# Nascut: 10.05.1962 (62 ani)
+Tehnician,Pavel,Nicolae,1620510234893,01.09.2020,Pitesti,Frigider:Arctic;Frigider:Bosch
+
+# Angajat din afara Bucuresti (primeste prima de transport)
+Tehnician,Munteanu,Adrian,1900825345902,18.04.2021,Craiova,TV:Samsung;MasinaDeSpalat:Samsung
+
+# Angajat cu vechime mare (bonus fidelitate ridicat)
+# Angajat in 2016, deci 9 ani vechime = 3 etape x 5% = 15% bonus
+Tehnician,Stanescu,Victor,1821201456014,10.01.2016,Bucuresti,Frigider:Samsung;Frigider:LG;Frigider:Bosch
+
+# Angajat recent (fara bonus fidelitate inca)
+Tehnician,Moldovan,Robert,1950908567127,05.12.2024,Sibiu,TV:LG;TV:Philips;MasinaDeSpalat:Whirlpool

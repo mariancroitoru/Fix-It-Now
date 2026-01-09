@@ -1,0 +1,80 @@
+\doxysection{Cerere\+Reparatie.\+h}
+\hypertarget{CerereReparatie_8h_source}{}\label{CerereReparatie_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once\ }}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Electrocasnic.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Tehnician.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{enum\ class}\ StareCerere\{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ IN\_ASTEPTARE,}
+\DoxyCodeLine{00012\ \ \ \ \ REPARTIZATA,}
+\DoxyCodeLine{00013\ \ \ \ \ IN\_LUCRU,}
+\DoxyCodeLine{00014\ \ \ \ \ FINALIZATA,}
+\DoxyCodeLine{00015\ \ \ \ \ INVALIDA}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCerereReparatie}{CerereReparatie}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO\ la\ fel!\ alta\ denumire\ pentru\ id\ uri!!}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ nextID;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::unique\_ptr<Electrocasnic>\ aparat;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ time\_t\ timestamp;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nivelComplexitate;\ \ \textcolor{comment}{//\ 0-\/5\ (0-\/\ nu\ se\ poatte\ repara!\ REMAT!!)}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ durataEstimata;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ durataRamasa;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ pretReparatie;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ StareCerere\ stare;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ idTehnician;\ \textcolor{comment}{//\ -\/1\ daca\ e\ nerepartizata}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCerereReparatie}{CerereReparatie}}()=\textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCerereReparatie}{CerereReparatie}}(std::unique\_ptr<Electrocasnic>\ \_aparat,\ \textcolor{keyword}{const}\ time\_t\ \_timestamp,\ \textcolor{keywordtype}{int}\ \_nivelComplexitate);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ constructor\ de\ copiere\ si\ operatorul\ egal\ pentru\ unique\_ptr\ ????????}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCerereReparatie}{CerereReparatie}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCerereReparatie}{CerereReparatie}}\&);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCerereReparatie}{CerereReparatie}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCerereReparatie}{CerereReparatie}}\&\ );}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//getteri}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getId()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getNivelComplexitate()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classElectrocasnic}{Electrocasnic}}*\ getAparat()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ time\_t\ getTimeStamp()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getDurataEstimata()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getDurataRamasa()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ getPretReparatie()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ StareCerere\ getStare()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getIdTehnician()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ setters}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setStare(\textcolor{keyword}{const}\ StareCerere);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setIdTehnician(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Procesare}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ proceseaza();\ \textcolor{comment}{//\ reduce\ durata\ ramasa}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ esteFinalizata()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ esteValida()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ afisare(std::ostream\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ std::string\ getTimeStampString()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Comparare\ pentru\ sortare????\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator<(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCerereReparatie}{CerereReparatie}}\&\ )\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \};}
+\DoxyCodeLine{00075\ }
+
+\end{DoxyCode}

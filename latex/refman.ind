@@ -1,0 +1,79 @@
+\begin{theindex}
+
+  \item {afisare}
+    \subitem {Frigider}, \hyperpage{10}
+    \subitem {MasinaDeSpalat}, \hyperpage{12}
+    \subitem {Receptioner}, \hyperpage{13}
+    \subitem {Supervizor}, \hyperpage{16}
+    \subitem {Tehnician}, \hyperpage{17}
+    \subitem {TV}, \hyperpage{19}
+  \item {Angajat}, \hyperpage{7}
+  \item {AngajatFactory}, \hyperpage{7}
+
+  \indexspace
+
+  \item {calculeazaSalariu}
+    \subitem {Receptioner}, \hyperpage{13}
+    \subitem {Supervizor}, \hyperpage{16}
+    \subitem {Tehnician}, \hyperpage{17}
+  \item {CerereReparatie}, \hyperpage{7}
+  \item {cloneaza}
+    \subitem {Frigider}, \hyperpage{10}
+    \subitem {MasinaDeSpalat}, \hyperpage{12}
+    \subitem {TV}, \hyperpage{19}
+  \item {CNPValidator}, \hyperpage{8}
+
+  \indexspace
+
+  \item {Data}, \hyperpage{8}
+
+  \indexspace
+
+  \item {Electrocasnic}, \hyperpage{9}
+  \item {ElectrocasnicFactory}, \hyperpage{9}
+
+  \indexspace
+
+  \item {Frigider}, \hyperpage{10}
+    \subitem {afisare}, \hyperpage{10}
+    \subitem {cloneaza}, \hyperpage{10}
+
+  \indexspace
+
+  \item {getTipAngajat}
+    \subitem {Receptioner}, \hyperpage{13}
+    \subitem {Supervizor}, \hyperpage{16}
+    \subitem {Tehnician}, \hyperpage{17}
+
+  \indexspace
+
+  \item {MasinaDeSpalat}, \hyperpage{11}
+    \subitem {afisare}, \hyperpage{12}
+    \subitem {cloneaza}, \hyperpage{12}
+
+  \indexspace
+
+  \item {Receptioner}, \hyperpage{12}
+    \subitem {afisare}, \hyperpage{13}
+    \subitem {calculeazaSalariu}, \hyperpage{13}
+    \subitem {getTipAngajat}, \hyperpage{13}
+
+  \indexspace
+
+  \item {ServiceManager}, \hyperpage{14}
+  \item {Supervizor}, \hyperpage{15}
+    \subitem {afisare}, \hyperpage{16}
+    \subitem {calculeazaSalariu}, \hyperpage{16}
+    \subitem {getTipAngajat}, \hyperpage{16}
+
+  \indexspace
+
+  \item {Tehnician}, \hyperpage{16}
+    \subitem {afisare}, \hyperpage{17}
+    \subitem {calculeazaSalariu}, \hyperpage{17}
+    \subitem {getTipAngajat}, \hyperpage{17}
+  \item {TV}, \hyperpage{18}
+    \subitem {afisare}, \hyperpage{19}
+    \subitem {cloneaza}, \hyperpage{19}
+
+\end{theindex}
