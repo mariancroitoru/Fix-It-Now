@@ -1,9 +1,0 @@
-\doxysection{Angajat\+Factory.\+cpp File Reference}
-\hypertarget{AngajatFactory_8cpp}{}\label{AngajatFactory_8cpp}\index{AngajatFactory.cpp@{AngajatFactory.cpp}}
-{\ttfamily \#include "{}Angajat\+Factory.\+h"{}}\newline
-{\ttfamily \#include "{}Receptioner.\+h"{}}\newline
-{\ttfamily \#include "{}Tehnician.\+h"{}}\newline
-{\ttfamily \#include "{}Supervizor.\+h"{}}\newline
-{\ttfamily \#include $<$stdexcept$>$}\newline
-Include dependency graph for Angajat\+Factory.\+cpp\+:
-% FIG 0

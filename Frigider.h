@@ -1,3 +1,4 @@
+#pragma once
 #include "Electrocasnic.h"
 #include <string>
 #include <memory>

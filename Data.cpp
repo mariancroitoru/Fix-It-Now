@@ -9,7 +9,6 @@
 
 using namespace std;
 
-// --- CONSTRUCTORI ---
 
 Data::Data(int z,int l,int a):zi(z),luna(l), an(a){
     if (!esteValida()) {
@@ -80,22 +79,20 @@ int Data::getVarsta() const {
 
 // --- OPERATORI ---
 
-bool Data::operator==(const Data& d) {
+bool Data::operator==(const Data& d) const {
     return (an == d.an && luna == d.luna && zi == d.zi);
 }
 
-bool Data::operator<(const Data& d) {
+bool Data::operator<(const Data& d) const {
     if (an != d.an) return an < d.an;
     if (luna != d.luna) return luna < d.luna;
     return zi < d.zi;
 }
 
-bool Data::operator>(const Data& d) {
-    // Daca nu e mai mica si nici egala, inseamna ca e mai mare
+bool Data::operator>(const Data& d) const {
     return !(*this < d || *this == d);
 }
 
-// Operatorul de afisare (cu <iomanip> pentru zerouri)
 ostream& operator<<(ostream& dev, const Data& d) {
     dev << setfill('0') << setw(2) << d.zi << "."
        << setfill('0') << setw(2) << d.luna << "."
@@ -103,7 +100,6 @@ ostream& operator<<(ostream& dev, const Data& d) {
     return dev;
 }
 
-// --- STATIC (Data Curenta) ---
 
 Data Data::dataCurenta() {
     auto azi = chrono::system_clock::now();

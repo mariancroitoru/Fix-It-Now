@@ -2,12 +2,13 @@
 #include <string>
 #include <memory>
 #include <vector>
-#include "Electrocasnic.h"
+#include "CerereReparatie.h"
 
-class ElectrocasnicFactory {
+class CerereFactory {
 public:
-    static std::unique_ptr<Electrocasnic> creeazaDinCSV(const std::string& linie);
+    static std::unique_ptr<CerereReparatie> creeazaDinCSV(const std::string& linie);
 
 private:
     static std::vector<std::string> splitLine(const std::string& linie, char delimitator);
 };
+

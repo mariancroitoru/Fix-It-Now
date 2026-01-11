@@ -23,9 +23,9 @@ public:
     int getAn() const;
 
     //operatori
-    bool operator<(const Data&);
-    bool operator>(const Data&);
-    bool operator==(const Data&);
+    bool operator<(const Data&) const;
+    bool operator>(const Data&) const;
+    bool operator==(const Data&) const;
     friend std::ostream& operator<<(std::ostream&, const Data&);
 
     //static

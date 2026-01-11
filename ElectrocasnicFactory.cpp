@@ -1,81 +1,70 @@
 #include "ElectrocasnicFactory.h"
-
-// Includem clasele concrete
 #include "Frigider.h"
-#include "TV.h"
 #include "MasinaDeSpalat.h"
-
+#include "TV.h"
+#include <sstream>
 #include <stdexcept>
 #include <iostream>
 
 using namespace std;
 
-unique_ptr<Electrocasnic> ElectrocasnicFactory::creeazaElectrocasnic(const string& tip, const string& marca,const string& model,int anFabricatie, double pretCatalog,const map<string, string>& dateSpecifice) 
-{
-    if (tip == "Frigider") {
-        if (dateSpecifice.find("congelator") == dateSpecifice.end()) {
-             throw invalid_argument("Eroare Factory: Lipseste specificatia 'congelator' pentru Frigider!");
+vector<string> ElectrocasnicFactory::splitLine(const string& linie, char delimitator) {
+    vector<string> tokens;
+    stringstream ss(linie);
+    string token;
+    while (getline(ss, token, delimitator)) {
+        if (!token.empty() && token.back() == '\r') {
+            token.pop_back();
         }
-
-        string val = dateSpecifice.at("congelator");
-        bool areCongelator = (val == "da" || val == "DA" || val == "Da");
-        
-        return make_unique<Frigider>(marca, model, anFabricatie, pretCatalog, areCongelator);
+        tokens.push_back(token);
     }
-    
-    else if (tip == "TV") {
-        if (dateSpecifice.find("diagonala") == dateSpecifice.end()) {
-            throw invalid_argument("Eroare Factory: Lipseste specificatia 'diagonala' pentru TV!");
-        }
-
-        double diagonala = stod(dateSpecifice.at("diagonala")); 
-
-        bool esteInCm = true;
-        if (dateSpecifice.find("unitateDiagonala") != dateSpecifice.end()) {
-            string unitate = dateSpecifice.at("unitateDiagonala");
-            if (unitate == "inch" || unitate == "in") {
-                esteInCm = false;
-            }
-        }
-        
-        return make_unique<TV>(marca, model, anFabricatie, pretCatalog, diagonala, esteInCm);
-    }
-    
-    else if (tip == "MasinaDeSpalat") {
-        if (dateSpecifice.find("capacitate") == dateSpecifice.end()) {
-            throw invalid_argument("Eroare Factory: Lipseste specificatia 'capacitate' pentru Masina de Spalat!");
-        }
-
-        double capacitate = stod(dateSpecifice.at("capacitate"));
-        
-        return make_unique<MasinaDeSpalat>(marca, model, anFabricatie, pretCatalog, capacitate);
-    }
-    
-    else {
-        throw invalid_argument("Eroare Factory: Tip electrocasnic necunoscut: " + tip);
-    }
+    return tokens;
 }
 
-map<string, string> ElectrocasnicFactory::parseazaDateSpecifice(const string& linie) {
-    map<string, string> rezultat;
-    size_t start = 0;
-    size_t end = 0;
 
-    while ((end = linie.find(';', start)) != string::npos) {
-        string pereche = linie.substr(start, end - start);
-        size_t splitPos = pereche.find(':');
-        if (splitPos != string::npos) {
-            rezultat[pereche.substr(0, splitPos)] = pereche.substr(splitPos + 1);
-        }
-        start = end + 1;
+unique_ptr<Electrocasnic> ElectrocasnicFactory::creeazaDinCSV(const string& linie) {
+    if (linie.empty()) 
+        return nullptr;
+
+    vector<string> tokens = splitLine(linie, ',');
+
+    if (tokens.size() < 5) {
+        throw invalid_argument("Linie incompleta (lipsesc date de baza): " + linie);
     }
 
-    if (start < linie.length()) {
-        string pereche = linie.substr(start);
-        size_t splitPos = pereche.find(':');
-        if (splitPos != string::npos) {
-            rezultat[pereche.substr(0, splitPos)] = pereche.substr(splitPos + 1);
-        }
+    string tip = tokens[0];
+    string marca = tokens[1];
+    string model = tokens[2];
+    
+    int an;
+    double pret;
+    try {
+        an = stoi(tokens[3]);
+        pret = stod(tokens[4]);
+    } catch (...) {
+        throw invalid_argument("Eroare conversie numar (An/Pret) in linia: " + linie);
     }
-    return rezultat;
+
+    if (tip == "Frigider") {
+        if (tokens.size() < 6) throw invalid_argument("Frigiderul necesita specificarea congelatorului (1/0).");
+        
+        bool areCongelator = (stoi(tokens[5]) != 0); 
+        return make_unique<Frigider>(marca, model, an, pret, areCongelator);
+    }
+    else if (tip == "MasinaDeSpalat") {
+        if (tokens.size() < 6) throw invalid_argument("Masina de spalat necesita capacitatea.");
+        
+        double capacitate = stod(tokens[5]);
+        return make_unique<MasinaDeSpalat>(marca, model, an, pret, capacitate);
+    }
+    else if (tip == "TV") {
+        if (tokens.size() < 7) throw invalid_argument("TV necesita diagonala si unitatea de masura (1=cm/0=inch).");
+        
+        double diagonala = stod(tokens[5]);
+        bool esteInCm = (stoi(tokens[6]) != 0);
+        return make_unique<TV>(marca, model, an, pret, diagonala, esteInCm);
+    }
+    else {
+        throw invalid_argument("Tip electrocasnic necunoscut: " + tip);
+    }
 }
